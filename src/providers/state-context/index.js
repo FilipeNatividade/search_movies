@@ -5,7 +5,6 @@ const StateContext = createContext();
 
 export const StatePtoviders = ({ children }) => {
   const [data, setData] = useState([]);
-  console.log(data)
   const [movieSelected, setMovieSelected] = useState({});
   const [idMovie, setIdMovie] = useState("");
   const [inputValue, setInputValue] = useState("");

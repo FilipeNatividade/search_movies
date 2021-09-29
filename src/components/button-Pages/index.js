@@ -16,17 +16,17 @@ const ButtonsPages = () => {
   };
 
   return (
-    <Container>
-      {count > 1 && (
-        <Buttons onClick={() => handlePages("-")}>
-          <ArrowLeftCircleFill className="arrowButton" />
-        </Buttons>
-      )}
-      {count < pages && (
-        <Buttons onClick={() => handlePages("+")}>
-          <ArrowRightCircleFill className="arrowButton" />
-        </Buttons>
-      )}
+    <Container href="#">
+        {count > 1 && (
+          <Buttons onClick={() => handlePages("-")}>
+            <ArrowLeftCircleFill className="arrowButton" />
+          </Buttons>
+        )}
+        {count < pages && (
+          <Buttons onClick={() => handlePages("+")}>
+            <ArrowRightCircleFill className="arrowButton" />
+          </Buttons>
+        )}
     </Container>
   );
 };
