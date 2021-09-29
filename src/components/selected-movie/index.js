@@ -7,7 +7,9 @@ import {
   Container,
   BackButton,
   NoPoster,
+  PosterContent,
   PosterMovie,
+  InfoContent,
   Paragraph,
   SpanParagraph,
 } from "./style";
@@ -24,16 +26,18 @@ const SelectedMovie = () => {
   }, [idMovie]);
   return (
     <>
-      <BackButton title='back to home' onClick={() => history.push("/")}>
+      <BackButton title="back to home" onClick={() => history.push("/")}>
         <ArrowLeftCircleFill className="home" />
       </BackButton>
       <Container>
-        {chosenMovie.Poster === "N/A" ? (
-          <NoPoster>No poster</NoPoster>
-        ) : (
-          <PosterMovie src={chosenMovie.Poster} alt={chosenMovie.Titulo} />
-        )}
-        <div>
+        <PosterContent>
+          {chosenMovie.Poster === "N/A" ? (
+            <NoPoster>No poster</NoPoster>
+          ) : (
+            <PosterMovie src={chosenMovie.Poster} alt={chosenMovie.Titulo} />
+          )}
+        </PosterContent>
+        <InfoContent>
           <Paragraph>
             Title: <SpanParagraph>{chosenMovie.Title}</SpanParagraph>{" "}
           </Paragraph>
@@ -58,7 +62,7 @@ const SelectedMovie = () => {
           <Paragraph>
             Awards: <SpanParagraph>{chosenMovie.Awards}</SpanParagraph>{" "}
           </Paragraph>
-        </div>
+        </InfoContent>
       </Container>
     </>
   );

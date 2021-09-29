@@ -52,9 +52,12 @@ export const InputSearch = styled.input`
 `;
 
 export const RenderCards = styled.div`
-  border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 25px;
   width: 100%;
+  @media only screen and (min-width: 801px){
+    justify-content: flex-start;
+  }
 `;

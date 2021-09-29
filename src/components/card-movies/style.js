@@ -5,14 +5,18 @@ export const Container = styled.div`
   border-radius: 16px;
   border: 5px solid #dedede;
   font-size: 20px;
-  margin-top: 25px;
+  margin: 25px auto 0;
+
   padding: 20px;
   width: 100%;
-  @media only screen and (min-width: 700px) and (max-width: 900px) {
+  @media only screen and (min-width: 500px) and (max-width: 800px) {
     width: 48%;
   }
-  @media only screen and (min-width: 901px){
-    width: 250px;
+  @media only screen and (min-width: 801px) and (max-width: 1000px) {
+    width: 30%;
+  }
+  @media only screen and (min-width: 1001px) {
+    width: 23%;
   }
  
 `;

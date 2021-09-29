@@ -10,12 +10,9 @@ export const Container = styled.div`
   margin-top: 25px;
   padding: 20px;
   width: 100%;
-  /* @media only screen and (min-width: 850px){
-    align-items:center ;
-    display: flex;
-    height: 125px;
+  @media only screen and (min-width: 650px){
     justify-content: space-between;
-  } */
+  }
 `;
 
 export const BackButton = styled.button`
@@ -26,23 +23,36 @@ export const BackButton = styled.button`
   }
 `;
 
+export const PosterContent = styled.div`
+width: 100%;
+@media only screen and (min-width: 650px){
+    width: 48%;
+  }
+`
+
 export const PosterMovie = styled.img`
   margin-bottom: 25px;
   width: 100%;
-  @media only screen and (min-width: 500px){
-    width: 300px;
-  }
 `;
 
 export const NoPoster = styled.p`
   color:#ff0000;
 `;
 
+export const InfoContent = styled.div`
+width: 100%;
+@media only screen and (min-width: 650px){
+    width: 48%;
+  }
+`
+
+
 export const Paragraph = styled.p`
   display: flex;
   font-weight:bolder;
   justify-content: space-between;
   margin-bottom: 25px;
+  width: 100%;
 
 `
 
