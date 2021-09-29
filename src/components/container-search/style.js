@@ -1,6 +1,9 @@
 import styled from "styled-components/macro";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const Header = styled.div`
   background-color: #445367;
@@ -18,6 +21,10 @@ export const Header = styled.div`
     display: flex;
     height: 125px;
     justify-content: space-between;
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: 1000px){
+    width: 900px;
   }
 `;
 
@@ -45,7 +52,9 @@ export const InputSearch = styled.input`
 `;
 
 export const RenderCards = styled.div`
+border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
 `;
