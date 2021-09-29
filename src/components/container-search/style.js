@@ -52,7 +52,7 @@ export const InputSearch = styled.input`
 `;
 
 export const RenderCards = styled.div`
-border: 1px solid red;
+  border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

@@ -3,9 +3,9 @@ import {
   ArrowLeftCircleFill,
   ArrowRightCircleFill,
 } from "@styled-icons/bootstrap";
-import { Container, Buttons } from "./style";
+import { Container, Buttons, Small } from "./style";
 const ButtonsPages = () => {
-  const { pages, count, SetCount } = useStateProvider();
+  const { title, pages, count, SetCount } = useStateProvider();
 
   const handlePages = (operator) => {
     if (operator === "+") {
@@ -16,17 +16,31 @@ const ButtonsPages = () => {
   };
 
   return (
-    <Container href="#">
-        {count > 1 && (
-          <Buttons title='Previous' onClick={() => handlePages("-")}>
-            <ArrowLeftCircleFill className="arrowButton" />
-          </Buttons>
-        )}
-        {count < pages && (
-          <Buttons title='next' onClick={() => handlePages("+")}>
-            <ArrowRightCircleFill className="arrowButton" />
-          </Buttons>
-        )}
+    <Container>
+      <a href="#">
+        <Buttons
+          className={count > 1 ? "" : "hidden"}
+          title="Previous"
+          onClick={() => handlePages("-")}
+        >
+          <ArrowLeftCircleFill className="arrowButton" />
+        </Buttons>
+      </a>
+      {title.length !== 0 && (
+        <Small>
+          {count} / {pages}
+        </Small>
+      )}
+
+      <a href="#">
+        <Buttons
+          className={count < pages ? "" : "hidden"}
+          title="next"
+          onClick={() => handlePages("+")}
+        >
+          <ArrowRightCircleFill className="arrowButton" />
+        </Buttons>
+      </a>
     </Container>
   );
 };
