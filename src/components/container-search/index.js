@@ -1,4 +1,5 @@
 import { useStateProvider } from "../../providers/state-context";
+import ButtonsPages from "../button-Pages";
 import { Container, InputSearch} from "./style";
 import CardMovie from "../card-movies";
 
@@ -25,6 +26,7 @@ const ContainerSearch = () => {
         <p className="notFound">filme não encontrado</p>
       )}
       {data !== undefined && <CardMovie />}
+      <ButtonsPages />
     </>
   );
 };

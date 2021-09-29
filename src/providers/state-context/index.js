@@ -5,19 +5,18 @@ const StateContext = createContext();
 
 export const StatePtoviders = ({ children }) => {
   const [data, setData] = useState([]);
-  const [movieSelected, setMovieSelected] = useState({});
   const [idMovie, setIdMovie] = useState("");
+  console.log(idMovie)
   const [inputValue, setInputValue] = useState("");
   const [title, setTitle] = useState("");
   const [pages, setPages] = useState(0);
   const [count, SetCount] = useState(1);
- 
+
   useEffect(() => {
     Api.get(`?&apikey=69630ed6&s=${title}&page=${count}`).then((response) => {
       setPages(Math.ceil(Number(response.data.totalResults) / 10));
       setData(response.data.Search);
     });
-
   }, [title, count]);
 
   return (
@@ -25,8 +24,6 @@ export const StatePtoviders = ({ children }) => {
       value={{
         data,
         setData,
-        movieSelected,
-        setMovieSelected,
         idMovie,
         setIdMovie,
         inputValue,
