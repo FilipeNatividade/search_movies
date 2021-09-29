@@ -5,7 +5,7 @@ import {
 } from "@styled-icons/bootstrap";
 import { Container, Buttons, Small } from "./style";
 const ButtonsPages = () => {
-  const { title, pages, count, SetCount } = useStateProvider();
+  const {data,pages, count, SetCount } = useStateProvider();
 
   const handlePages = (operator) => {
     if (operator === "+") {
@@ -26,7 +26,7 @@ const ButtonsPages = () => {
           <ArrowLeftCircleFill className="arrowButton" />
         </Buttons>
       </a>
-      {title.length !== 0 && (
+      {data !== undefined && (
         <Small>
           {count} / {pages}
         </Small>
