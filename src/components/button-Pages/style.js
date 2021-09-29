@@ -5,7 +5,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 50px auto 0;
-  width: 25%;
   .hidden{
     visibility: hidden;
   }
