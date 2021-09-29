@@ -8,13 +8,20 @@ export const Container = styled.div`
   margin-top: 25px;
   padding: 20px;
   width: 100%;
+  @media only screen and (min-width: 700px) and (max-width: 900px) {
+    width: 48%;
+  }
+  @media only screen and (min-width: 901px){
+    width: 250px;
+  }
+ 
 `;
 
 export const Posters = styled.img`
   width: 100%;
 `;
 
-export const Title = styled.p`
+export const Title = styled.h2`
   margin-top: 25px;
 `;
 

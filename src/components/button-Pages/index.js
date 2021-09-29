@@ -18,12 +18,12 @@ const ButtonsPages = () => {
   return (
     <Container href="#">
         {count > 1 && (
-          <Buttons onClick={() => handlePages("-")}>
+          <Buttons title='Previous' onClick={() => handlePages("-")}>
             <ArrowLeftCircleFill className="arrowButton" />
           </Buttons>
         )}
         {count < pages && (
-          <Buttons onClick={() => handlePages("+")}>
+          <Buttons title='next' onClick={() => handlePages("+")}>
             <ArrowRightCircleFill className="arrowButton" />
           </Buttons>
         )}

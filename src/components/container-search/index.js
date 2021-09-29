@@ -1,6 +1,6 @@
 import { useStateProvider } from "../../providers/state-context";
 import ButtonsPages from "../button-Pages";
-import { Container, InputSearch} from "./style";
+import { Container, Header, InputSearch, RenderCards } from "./style";
 import CardMovie from "../card-movies";
 
 const ContainerSearch = () => {
@@ -11,23 +11,22 @@ const ContainerSearch = () => {
     setTitle(e.target.value);
   };
   return (
-    <>
-      <Container>
-        <h2>Qual filme você procura?</h2>
-        <div>
+    <Container>
+      <Header>
+        <h2>which movie are you looking for?</h2>
           <InputSearch
             value={title}
             onChange={(e) => getTitle(e)}
-            placeholder="Informe o título no idioma de origem"
+            placeholder="Enter the title in the source language"
           />
-        </div>
-      </Container>
+      </Header>
+
       {title.length > 0 && data === undefined && (
-        <p className="notFound">filme não encontrado</p>
+        <p className="notFound">movie not found</p>
       )}
-      {data !== undefined && <CardMovie />}
+      <RenderCards>{data !== undefined && <CardMovie />}</RenderCards>
       <ButtonsPages />
-    </>
+    </Container>
   );
 };
 

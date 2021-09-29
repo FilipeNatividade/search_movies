@@ -14,7 +14,7 @@ const CardMovie = () => {
       {data.map((movie) => (
         <Container key={uuidv4()} onClick={() => handleGetID(movie.imdbID)}>
           {movie.Poster === "N/A" ? (
-            <NoPoster>Sem poster</NoPoster>
+            <NoPoster>No poster</NoPoster>
           ) : (
             <Posters src={movie.Poster} alt={movie.Title} />
           )}

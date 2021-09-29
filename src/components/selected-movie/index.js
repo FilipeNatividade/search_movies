@@ -24,40 +24,41 @@ const SelectedMovie = () => {
   }, [idMovie]);
   return (
     <>
-      <BackButton onClick={() => history.push("/")}>
+      <BackButton title='back to home' onClick={() => history.push("/")}>
         <ArrowLeftCircleFill className="home" />
       </BackButton>
       <Container>
         {chosenMovie.Poster === "N/A" ? (
-          <NoPoster>Sem poster</NoPoster>
+          <NoPoster>No poster</NoPoster>
         ) : (
           <PosterMovie src={chosenMovie.Poster} alt={chosenMovie.Titulo} />
         )}
-
-        <Paragraph>
-          Título: <SpanParagraph>{chosenMovie.Title}</SpanParagraph>{" "}
-        </Paragraph>
-        <Paragraph>
-          Ano: <SpanParagraph>{chosenMovie.Year}</SpanParagraph>{" "}
-        </Paragraph>
-        <Paragraph>
-          Estreia: <SpanParagraph>{chosenMovie.Released}</SpanParagraph>{" "}
-        </Paragraph>
-        <Paragraph>
-          Duração: <SpanParagraph>{chosenMovie.Runtime}</SpanParagraph>{" "}
-        </Paragraph>
-        <Paragraph>
-          Genero: <SpanParagraph>{chosenMovie.Genre}</SpanParagraph>{" "}
-        </Paragraph>
-        <Paragraph>
-          Diretor: <SpanParagraph>{chosenMovie.Director}</SpanParagraph>{" "}
-        </Paragraph>
-        <Paragraph>
-          Sinopse: <SpanParagraph>{chosenMovie.Plot}</SpanParagraph>{" "}
-        </Paragraph>
-        <Paragraph>
-          Awards: <SpanParagraph>{chosenMovie.Awards}</SpanParagraph>{" "}
-        </Paragraph>
+        <div>
+          <Paragraph>
+            Title: <SpanParagraph>{chosenMovie.Title}</SpanParagraph>{" "}
+          </Paragraph>
+          <Paragraph>
+            Year: <SpanParagraph>{chosenMovie.Year}</SpanParagraph>{" "}
+          </Paragraph>
+          <Paragraph>
+            Released: <SpanParagraph>{chosenMovie.Released}</SpanParagraph>{" "}
+          </Paragraph>
+          <Paragraph>
+            Runtime: <SpanParagraph>{chosenMovie.Runtime}</SpanParagraph>{" "}
+          </Paragraph>
+          <Paragraph>
+            Genre: <SpanParagraph>{chosenMovie.Genre}</SpanParagraph>{" "}
+          </Paragraph>
+          <Paragraph>
+            Director: <SpanParagraph>{chosenMovie.Director}</SpanParagraph>{" "}
+          </Paragraph>
+          <Paragraph>
+            Plot: <SpanParagraph>{chosenMovie.Plot}</SpanParagraph>{" "}
+          </Paragraph>
+          <Paragraph>
+            Awards: <SpanParagraph>{chosenMovie.Awards}</SpanParagraph>{" "}
+          </Paragraph>
+        </div>
       </Container>
     </>
   );
