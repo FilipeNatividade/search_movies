@@ -16,14 +16,17 @@ import {
 
 const SelectedMovie = () => {
   const history = useHistory();
+  
   const { idMovie } = useStateProvider();
   const [chosenMovie, setChosenMovie] = useState({});
+
   useEffect(() => {
     idMovie.length !== 0 &&
       Api.get(`?&apikey=69630ed6&i=${idMovie}`).then((response) => {
         setChosenMovie(response.data);
       });
   }, [idMovie]);
+
   return (
     <>
       <BackButton title="back to home" onClick={() => history.push("/")}>
@@ -39,28 +42,28 @@ const SelectedMovie = () => {
         </PosterContent>
         <InfoContent>
           <Paragraph>
-            Title: <SpanParagraph>{chosenMovie.Title}</SpanParagraph>{" "}
+            Title: <SpanParagraph>{chosenMovie.Title}</SpanParagraph>
           </Paragraph>
           <Paragraph>
-            Year: <SpanParagraph>{chosenMovie.Year}</SpanParagraph>{" "}
+            Year: <SpanParagraph>{chosenMovie.Year}</SpanParagraph>
           </Paragraph>
           <Paragraph>
-            Released: <SpanParagraph>{chosenMovie.Released}</SpanParagraph>{" "}
+            Released: <SpanParagraph>{chosenMovie.Released}</SpanParagraph>
           </Paragraph>
           <Paragraph>
-            Runtime: <SpanParagraph>{chosenMovie.Runtime}</SpanParagraph>{" "}
+            Runtime: <SpanParagraph>{chosenMovie.Runtime}</SpanParagraph>
           </Paragraph>
           <Paragraph>
-            Genre: <SpanParagraph>{chosenMovie.Genre}</SpanParagraph>{" "}
+            Genre: <SpanParagraph>{chosenMovie.Genre}</SpanParagraph>
           </Paragraph>
           <Paragraph>
-            Director: <SpanParagraph>{chosenMovie.Director}</SpanParagraph>{" "}
+            Director: <SpanParagraph>{chosenMovie.Director}</SpanParagraph>
           </Paragraph>
           <Paragraph>
-            Plot: <SpanParagraph>{chosenMovie.Plot}</SpanParagraph>{" "}
+            Plot: <SpanParagraph>{chosenMovie.Plot}</SpanParagraph>
           </Paragraph>
           <Paragraph>
-            Awards: <SpanParagraph>{chosenMovie.Awards}</SpanParagraph>{" "}
+            Awards: <SpanParagraph>{chosenMovie.Awards}</SpanParagraph>
           </Paragraph>
         </InfoContent>
       </Container>

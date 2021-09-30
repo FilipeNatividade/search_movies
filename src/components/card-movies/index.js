@@ -1,14 +1,18 @@
+import { useHistory } from "react-router";
 import { useStateProvider } from "../../providers/state-context";
 import { v4 as uuidv4 } from "uuid";
 import { Container, Posters, Title, NoPoster } from "./style";
-import { useHistory } from "react-router";
+
 const CardMovie = () => {
+
   const history = useHistory()
   const { data,setIdMovie} = useStateProvider();
+
   const handleGetID = (movie) => {
     setIdMovie(movie)
     history.push('/movie')
   };
+
   return (
     <>
       {data.map((movie) => (

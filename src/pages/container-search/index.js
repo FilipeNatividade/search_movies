@@ -1,7 +1,7 @@
 import { useStateProvider } from "../../providers/state-context";
-import ButtonsPages from "../button-Pages";
+import ButtonsPages from "../../components/button-Pages";
+import CardMovie from "../../components/card-movies";
 import { Container, Header, InputSearch, RenderCards } from "./style";
-import CardMovie from "../card-movies";
 
 const ContainerSearch = () => {
   const { data, title, setTitle } = useStateProvider();

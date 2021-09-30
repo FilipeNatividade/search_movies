@@ -1,6 +1,6 @@
 import { Switch, Route } from "react-router-dom";
-import ContainerSearch from "./components/container-search";
-import SelectedMovie from "./components/selected-movie";
+import ContainerSearch from "./pages/container-search";
+import SelectedMovie from "./pages/selected-movie";
 
 const Routes = () => {
   return (

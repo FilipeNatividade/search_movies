@@ -4,8 +4,11 @@ import {
   ArrowRightCircleFill,
 } from "@styled-icons/bootstrap";
 import { Container, Buttons, Small } from "./style";
+import { Link } from "react-router-dom";
+
 const ButtonsPages = () => {
-  const {data,pages, count, SetCount } = useStateProvider();
+
+  const { data, pages, count, SetCount } = useStateProvider();
 
   const handlePages = (operator) => {
     if (operator === "+") {
@@ -17,7 +20,7 @@ const ButtonsPages = () => {
 
   return (
     <Container>
-      <a href="#">
+      <a href="/#">
         <Buttons
           className={count > 1 ? "" : "hidden"}
           title="Previous"
@@ -32,7 +35,7 @@ const ButtonsPages = () => {
         </Small>
       )}
 
-      <a href="#">
+      <a href='/#'>
         <Buttons
           className={count < pages ? "" : "hidden"}
           title="next"

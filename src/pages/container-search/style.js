@@ -9,7 +9,9 @@ export const Header = styled.div`
   background-color: #445367;
   border-radius: 16px;
   font-size: 20px;
-  padding: 15px;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 15px; 
   width: 100%;
   h2{
     @media only screen and (min-width: 850px){
@@ -21,10 +23,6 @@ export const Header = styled.div`
     display: flex;
     height: 125px;
     justify-content: space-between;
-    margin: 0 auto;
-  }
-  @media only screen and (min-width: 1000px){
-    width: 900px;
   }
 `;
 
